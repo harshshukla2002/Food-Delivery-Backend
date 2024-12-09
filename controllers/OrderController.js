@@ -6,7 +6,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 // place user order
 const placeOrder = async (req, res) => {
-  const frontendUrl = "http://localhost:3000";
+  const frontendUrl = "https://deloffood.netlify.app";
   const { userId, items, amount, address } = req.body;
   try {
     const newOrder = new orderModel({
